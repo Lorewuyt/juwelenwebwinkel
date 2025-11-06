@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nóva — Tijdloze sieraden</title>
+    <link rel="stylesheet" href="css/juwelenWinkel.css" />
+
+    <script type="module">
+        import { Juwelenwinkel } from './javascript/webshopApp.js';
+        window.addEventListener('load', () => {
+            let shop = new Juwelenwinkel();
+            shop.init();
+        });
+    </script>
+</head>
+
+<body>
+<header class="site-header">
+    <div class="brand">
+        <a href><img src="afbeeldingen/nóva_logo.png" alt="nóva logo" class="logo" /></a>
+    </div>
+
+    <div class="header-actions">
+        <button class="btn" onclick="scrollToSection('favorietenSection')">
+            favorieten <span id="favorietTeller">0</span>
+        </button>
+
+        <button class="btn" onclick="scrollToSection('winkelmandSection')">
+            winkelmandje <span id="mandTeller">0</span>
+        </button>
+
+        <select id="categorie">
+            <option value="alles">alles</option>
+            <option value="armbanden">armbanden</option>
+            <option value="kettingen">kettingen</option>
+            <option value="oorbellen">oorbellen</option>
+            <option value="ringen">ringen</option>
+        </select>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Tijdloze elegantie, met liefde ontworpen</h2>
+        <p>Ontdek de nieuwe collectie van nóva — sieraden die jou laten stralen.</p>
+        <a href="#productenSection" class="btn hero-btn">Shop nu</a>
+    </div>
+</section>
+
+<main>
+
+    <!-- PRODUCTEN -->
+    <section class="collections" id="productenSection">
+        <h3>Producten</h3>
+        <ul id="productenlijst"></ul>
+    </section>
+
+    <!-- FAVORIETEN -->
+    <section class="collections" id="favorietenSection">
+        <h3>Favorieten</h3>
+        <ul id="favorietenlijst"></ul>
+    </section>
+
+    <!-- WINKELMAND -->
+    <section class="collections" id="winkelmandSection">
+        <h3>Winkelmandje</h3>
+        <ul id="winkelmandlijst"></ul>
+        <p id="winkelmandTotaal"></p>
+    </section>
+
+    <!-- LOGIN -->
+    <section class="login-section">
+        <h2>Inloggen bij nóva</h2>
+        <form id="loginForm" class="login-form">
+            <label>Voornaam:</label>
+            <input type="text" id="voornaam" required>
+            <label>Naam:</label>
+            <input type="text" id="naam" required>
+            <label>E-mail:</label>
+            <input type="email" id="email" required>
+            <button type="submit" class="btn">Inloggen</button>
+        </form>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2025 nóva — Tijdloze sieraden</p>
+</footer>
+
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>

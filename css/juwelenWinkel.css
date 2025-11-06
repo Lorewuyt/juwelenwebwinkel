@@ -1,0 +1,293 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-header .brand img.logo {
+    height: 45px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-actions input[type="search"] {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.header-actions select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.hero {
+    background-color: #f2ece4;
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.hero h2 {
+    margin: 0 0 15px;
+    font-size: 2rem;
+    color: #444;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    color: #666;
+}
+
+.hero-btn {
+    background-color: #d1a87d;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px 40px;
+}
+
+.collections {
+    flex: 1;
+}
+
+.collections h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+#productenlijst {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+#productenlijst li {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    flex: 1 1 calc(33% - 20px);
+    max-width: calc(33% - 20px);
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#productenlijst li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+#productenlijst li img {
+    max-width: 80%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+#productenlijst li h4 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+#productenlijst li p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+#productenlijst li button {
+    margin-top: 8px;
+    padding: 6px 12px;
+    border: none;
+    background-color: #d1a87d;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#productenlijst li button:hover {
+    background-color: #b88b64;
+}
+
+#favorietenlijst,
+#winkelmandlijst {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-favoriet,
+.item-winkelmand {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.item-favoriet img,
+.item-winkelmand img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.item-favoriet .item-info,
+.item-winkelmand .item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-favoriet button,
+.item-winkelmand button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #b88b64;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.item-favoriet button:hover,
+.item-winkelmand button:hover {
+    background-color: #d3a680;
+}
+
+#winkelmandTotaal {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.login-section {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.login-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.login-form input {
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.login-form button {
+    background-color: #d1a87d;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.login-form button:hover {
+    background-color: #b88b64;
+}
+
+.site-footer {
+    background-color: #f2ece4;
+    text-align: center;
+    padding: 20px 40px;
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #666;
+    margin: 0 6px;
+}
+
+.footer-nav a:hover {
+    color: #333;
+}
+
+@media (max-width: 900px) {
+    #productenlijst li {
+        flex: 1 1 calc(50% - 20px); /* 2 per rij op tablets */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    #productenlijst li {
+        flex: 1 1 100%; /* 1 per rij op mobiel */
+        max-width: 100%;
+    }
+}
