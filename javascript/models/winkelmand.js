@@ -1,3 +1,5 @@
+// test comment
+
 export class Winkelmand {
     constructor() {
         this.items = [];
