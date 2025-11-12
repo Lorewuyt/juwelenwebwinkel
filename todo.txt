@@ -1,0 +1,3 @@
+- die contact op een andere pagina zetten -- done --
+- basket op apparte pagina
+- betaalsysteem
