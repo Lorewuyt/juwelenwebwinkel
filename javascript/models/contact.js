@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
             contactStatus.innerHTML = '<p class="error">Vul alstublieft alle velden in voordat u het formulier verzendt.</p>';
         }
         else {
-            emailjs.send("service_arlagip", "template_xmvhwmx", {
+            emailjs.send("service_enga45j", "template_a4eqzqb", {
                 from_title: titel,
                 name: naam,
                 from_email: email,
