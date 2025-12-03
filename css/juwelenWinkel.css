@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 }
@@ -13,14 +12,15 @@ body {
 
 .site-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px 40px;
     background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;
+    flex-direction: row;
 }
 
 .site-header .brand img.logo {
@@ -87,15 +87,16 @@ body {
     margin-bottom: 20px;
     font-size: 1.5rem;
     color: #444;
+    text-align: center;
 }
 
 #productenlijst {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0;
-    margin: 0;
+    margin: 10px;
     gap: 20px;
 }
 
@@ -105,9 +106,9 @@ body {
     border-radius: 10px;
     padding: 15px;
     flex: 1 1 calc(33% - 20px);
-    max-width: calc(33% - 20px);
+    max-width: 250px;
     text-align: center;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     flex-direction: column;
@@ -116,13 +117,14 @@ body {
 
 #productenlijst li:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
 }
 
 #productenlijst li img {
     max-width: 80%;
     border-radius: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 0;
+    align-items: center;
 }
 
 #productenlijst li h4 {
@@ -146,6 +148,10 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
+    padding-left: 3px;
+    width: 60px;
+    height: 50px;
+    padding-right: 7px;
 }
 
 #productenlijst li button:hover {
@@ -170,7 +176,7 @@ body {
     border: 1px solid #eee;
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .item-favoriet img,
@@ -217,7 +223,7 @@ body {
     margin: 40px auto;
     padding: 30px 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .login-section h2 {
@@ -280,14 +286,38 @@ body {
 
 @media (max-width: 900px) {
     #productenlijst li {
-        flex: 1 1 calc(50% - 20px); /* 2 per rij op tablets */
-        max-width: calc(50% - 20px);
+        flex: 1 1 calc(50% - 20px);
+        /* 2 per rij op tablets */
+        max-width: 250px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 575px) {
     #productenlijst li {
-        flex: 1 1 100%; /* 1 per rij op mobiel */
-        max-width: 100%;
+        flex: 1 1 100%;
+        /* 1 per rij op mobiel */
+        max-width: 46%;
+    }
+
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 40px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        flex-direction: column;
+    }
+
+    .header-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        align-content: flex-end;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 }
