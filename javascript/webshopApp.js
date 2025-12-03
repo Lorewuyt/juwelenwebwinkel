@@ -1,4 +1,3 @@
-import { Klant } from './models/klant.js';
 import { Winkelmand, WinkelmandController } from './models/winkelmand.js';
 import { Product, ProductController } from './models/product.js';
 import { FakeDatabase } from './models/fakeDatabase.js';
@@ -6,7 +5,6 @@ import { Favorieten, FavorietenController } from './models/favorieten.js';
 
 export class Juwelenwinkel {
     constructor() {
-        this.klant = new Klant();
         this.winkelmand = new Winkelmand();
         this.favorieten = new Favorieten();
         this.dataProducten = new FakeDatabase();

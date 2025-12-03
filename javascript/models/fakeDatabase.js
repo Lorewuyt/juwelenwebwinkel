@@ -35,7 +35,7 @@ export class FakeDatabase {
             {
                 ID: 4,
                 naam: 'ketting met klavers',
-                beschrijving: "een minimalistische ketting met klavers aan die je een dagdagelijkse portie geluk aan bied.",
+                beschrijving: "een minimalistische ketting met klavers die je geluk aan bied.",
                 afbeelding: "afbeeldingen/ketting_klavers.goud.jpg",
                 prijs: 16.99,
                 categorie: 'kettingen',
